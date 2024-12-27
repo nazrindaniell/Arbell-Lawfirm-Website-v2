@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .contact-btn {
+    @apply rounded-full bg-orange px-5 py-2 text-white;
+  }
+  .learn-more-btn {
+    @apply rounded-full border border-orange px-5 py-2 text-orange;
+  }
+  .mobile-menu {
+    @apply mt-4 flex flex-col items-center gap-5;
+  }
+}
