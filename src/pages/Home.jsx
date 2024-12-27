@@ -1,6 +1,7 @@
 import HeaderImg from "../assets/hero-header.webp";
 import WhyUsCard from "../components/WhyUsCard";
 import Partnership from "../components/Partnership";
+import Faq from "../components/Faq";
 
 function Home() {
   return (
@@ -68,7 +69,7 @@ function Home() {
         </div>
       </section>
       {/* who trusted us */}
-      <section className="my-14 border-y border-white-300">
+      <section className="my-6 border-y border-white-300 lg:my-14">
         <div className="border-black container mx-auto py-8 lg:flex">
           <div className="flex w-full flex-col gap-10">
             <h2 className="text-center font-serif text-3xl font-bold lg:text-4xl">
@@ -82,6 +83,10 @@ function Home() {
             />
           </div>
         </div>
+      </section>
+      {/* faq */}
+      <section className="container mx-auto mb-8 py-8 lg:mb-14">
+        <Faq />
       </section>
     </>
   );
