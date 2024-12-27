@@ -15,12 +15,12 @@ function Navbar() {
     <>
       <nav className="border-b border-b-orange py-4">
         <div className="container mx-auto flex items-center justify-between">
-          <div className="w-36">
+          <div className="w-32">
             <Link to="/">
               <img
                 src={logo}
                 alt="Arbell Logo"
-                className="h-full w-full object-center"
+                className="w-full object-center"
               />
             </Link>
           </div>
