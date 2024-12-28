@@ -23,8 +23,8 @@ function About() {
         <GalleryHeader imgSrc={GalleryImg} />
       </section>
       {/* About Content*/}
-      <section className="container mx-auto my-32 py-8">
-        <div className="grid grid-cols-1 gap-20">
+      <section className="container mx-auto my-14 py-8 lg:my-32">
+        <div className="grid grid-cols-1 gap-14 lg:gap-20">
           {/* 1st row */}
           <div className="grid grid-cols-1 place-items-center gap-10 lg:grid-cols-2">
             <div className="flex flex-col gap-4">
