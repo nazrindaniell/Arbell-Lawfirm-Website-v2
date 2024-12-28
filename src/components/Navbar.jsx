@@ -24,23 +24,23 @@ function Navbar() {
               />
             </Link>
           </div>
-          <div className="hidden justify-between gap-5 md:flex">
+          <div className="hidden justify-between gap-6 lg:flex">
             <Link to="/about">About Us</Link>
             <Link to="/lawyers">Our Lawyers</Link>
             <Link to="/services">Our Services</Link>
             <Link to="/blog">Publication & Updates</Link>
           </div>
-          <div className="contact-btn hidden md:block">
+          <div className="contact-btn hidden lg:block">
             <Link to="/contact">Contact Us</Link>
           </div>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button onClick={toggleMenu}>
               <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="lg" />
             </button>
           </div>
         </div>
         {isOpen && (
-          <div className="mt-4 flex flex-col items-center gap-5 md:hidden">
+          <div className="mt-4 flex flex-col items-center gap-4 lg:hidden">
             <Link to="/about" onClick={toggleMenu}>
               About Us
             </Link>
