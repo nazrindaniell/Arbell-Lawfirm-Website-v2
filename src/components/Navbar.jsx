@@ -16,7 +16,7 @@ function Navbar() {
       <nav className="border-b border-b-orange py-4">
         <div className="container mx-auto flex items-center justify-between">
           <div className="w-32">
-            <Link to="/">
+            <Link exact="true" to="/">
               <img
                 src={logo}
                 alt="Arbell Logo"
@@ -25,10 +25,10 @@ function Navbar() {
             </Link>
           </div>
           <div className="hidden justify-between gap-5 md:flex">
-            <Link exact="true" to="/about">
-              About Us
-            </Link>
+            <Link to="/about">About Us</Link>
             <Link to="/lawyers">Our Lawyers</Link>
+            <Link to="/services">Our Services</Link>
+            <Link to="/blog">Publication & Updates</Link>
           </div>
           <div className="contact-btn hidden md:block">
             <Link to="/contact">Contact Us</Link>
@@ -41,11 +41,17 @@ function Navbar() {
         </div>
         {isOpen && (
           <div className="mt-4 flex flex-col items-center gap-5 md:hidden">
-            <Link exact="true" to="/about" onClick={toggleMenu}>
+            <Link to="/about" onClick={toggleMenu}>
               About Us
             </Link>
             <Link to="/lawyers" onClick={toggleMenu}>
               Our Lawyers
+            </Link>
+            <Link to="/services" onClick={toggleMenu}>
+              Our Services
+            </Link>
+            <Link to="/blog" onClick={toggleMenu}>
+              Publication & Updates
             </Link>
             <Link to="/contact" className="contact-btn" onClick={toggleMenu}>
               Contact Us
