@@ -2,6 +2,8 @@ import HeaderImg from "../assets/hero-header.webp";
 import WhyUsCard from "../components/WhyUsCard";
 import Partnership from "../components/Partnership";
 import Faq from "../components/Faq";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   return (
@@ -18,8 +20,11 @@ function Home() {
             <span className="font-bold"> focus on growth.</span> Secure your
             future with confidence partner with us.
           </p>
-          <a href="#" className="learn-more-btn w-fit">
-            Learn More
+          <a
+            href="#"
+            className="learn-more-btn flex w-fit items-center justify-center gap-3"
+          >
+            Learn More <FontAwesomeIcon icon={faChevronRight} />
           </a>
         </div>
         <div className="flex items-center justify-center">
