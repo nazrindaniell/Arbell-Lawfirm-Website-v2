@@ -70,19 +70,12 @@ function Home() {
       </section>
       {/* who trusted us */}
       <section className="my-6 border-y border-white-300 lg:my-14">
-        <div className="border-black container mx-auto py-8 lg:flex">
-          <div className="flex w-full flex-col gap-10">
-            <h2 className="text-center font-serif text-3xl font-bold lg:text-4xl">
-              Who trusted us
-            </h2>
-            <Partnership
-              img1={HeaderImg}
-              img2={HeaderImg}
-              img3={HeaderImg}
-              img4={HeaderImg}
-            />
-          </div>
-        </div>
+        <Partnership
+          img1={HeaderImg}
+          img2={HeaderImg}
+          img3={HeaderImg}
+          img4={HeaderImg}
+        />
       </section>
       {/* faq */}
       <section className="container mx-auto mb-8 py-8 lg:mb-14">
