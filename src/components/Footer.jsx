@@ -18,8 +18,8 @@ function Footer() {
                 </p>
               </div>
               <div className="flex flex-col gap-6 lg:flex-row">
-                <div className="flex flex-1 flex-col gap-5">
-                  <h4 className="font-serif text-2xl">Contact Us</h4>
+                <div className="flex flex-1 flex-col gap-3 lg:gap-5">
+                  <h4 className="font-serif text-lg lg:text-2xl">Contact Us</h4>
                   <div className="flex flex-col gap-1">
                     <a href="">+62-821-7890</a>
                     <a href="">hello@arbell.com</a>
@@ -28,7 +28,9 @@ function Footer() {
                 </div>
                 <div className="flex flex-1 flex-col gap-5">
                   <div className="flex flex-col gap-1">
-                    <h4 className="font-serif text-2xl">Connect with us</h4>
+                    <h4 className="font-serif text-lg lg:text-2xl">
+                      Connect with us
+                    </h4>
                     <p>Let's stay connected, reach out anytime!</p>
                   </div>
                   <div className="flex gap-3">
