@@ -1,33 +1,36 @@
 import HeaderImg from "../assets/hero-header.webp";
-import React from "react";
+import PertaminaLogo from "../assets/pertamina-logo.webp";
+import ShopeeLogo from "../assets/shopee-logo.webp";
+import AppleLogo from "../assets/apple-logo.webp";
+import SamsungLogo from "../assets/samsung-logo.webp";
 
 function Partnership() {
   return (
     <div className="border-black container mx-auto py-8 lg:flex">
-      <div className="flex w-full flex-col gap-10">
+      <div className="flex w-full flex-col gap-8 md:gap-8">
         <h2 className="text-center font-serif text-3xl font-bold lg:text-4xl">
           Who trusted us
         </h2>
-        <div className="lg:align-center grid grid-cols-2 place-items-center gap-5 lg:flex lg:flex-wrap lg:justify-center lg:gap-2">
+        <div className="grid grid-cols-2 place-items-center gap-8 md:grid-cols-4">
           <img
-            src={HeaderImg}
+            src={PertaminaLogo}
             alt="Partner 1"
-            className="w-full lg:aspect-[3/2] lg:w-[120px] lg:flex-1 lg:object-contain"
+            className="md:w-54 aspect-[3/2] w-52 object-contain"
           />
           <img
-            src={HeaderImg}
+            src={ShopeeLogo}
             alt="Partner 2"
-            className="w-full lg:aspect-[3/2] lg:w-[120px] lg:flex-1 lg:object-contain"
+            className="md:w-54 aspect-[3/2] w-52 object-contain"
           />
           <img
-            src={HeaderImg}
+            src={AppleLogo}
             alt="Partner 3"
-            className="w-full lg:aspect-[3/2] lg:w-[120px] lg:flex-1 lg:object-contain"
+            className="md:w-54 aspect-[3/2] w-52 object-contain"
           />
           <img
-            src={HeaderImg}
+            src={SamsungLogo}
             alt="Partner 4"
-            className="w-full lg:aspect-[3/2] lg:w-[120px] lg:flex-1 lg:object-contain"
+            className="md:w-54 aspect-[3/2] w-52 object-contain"
           />
         </div>
       </div>
