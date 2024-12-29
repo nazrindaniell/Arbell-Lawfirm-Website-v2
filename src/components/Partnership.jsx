@@ -1,6 +1,7 @@
+import HeaderImg from "../assets/hero-header.webp";
 import React from "react";
 
-function Partnership({ img1, img2, img3, img4 }) {
+function Partnership() {
   return (
     <div className="border-black container mx-auto py-8 lg:flex">
       <div className="flex w-full flex-col gap-10">
@@ -9,22 +10,22 @@ function Partnership({ img1, img2, img3, img4 }) {
         </h2>
         <div className="lg:align-center grid grid-cols-2 place-items-center gap-5 lg:flex lg:flex-wrap lg:justify-center lg:gap-2">
           <img
-            src={img1}
+            src={HeaderImg}
             alt="Partner 1"
             className="w-full lg:aspect-[3/2] lg:w-[120px] lg:flex-1 lg:object-contain"
           />
           <img
-            src={img2}
+            src={HeaderImg}
             alt="Partner 2"
             className="w-full lg:aspect-[3/2] lg:w-[120px] lg:flex-1 lg:object-contain"
           />
           <img
-            src={img3}
+            src={HeaderImg}
             alt="Partner 3"
             className="w-full lg:aspect-[3/2] lg:w-[120px] lg:flex-1 lg:object-contain"
           />
           <img
-            src={img4}
+            src={HeaderImg}
             alt="Partner 4"
             className="w-full lg:aspect-[3/2] lg:w-[120px] lg:flex-1 lg:object-contain"
           />
