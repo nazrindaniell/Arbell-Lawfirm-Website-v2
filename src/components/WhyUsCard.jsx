@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import LearnMoreButton from "./LearnMoreButton";
 
 function WhyUsCard({ number, title, description, imgSrc, linkSrc, reverse }) {
   return (
@@ -19,12 +18,7 @@ function WhyUsCard({ number, title, description, imgSrc, linkSrc, reverse }) {
         </h1>
         <h4 className="font-serif text-xl lg:text-2xl">{title}</h4>
         <p>{description}</p>
-        <a
-          href={linkSrc}
-          className="learn-more-btn flex w-fit items-center justify-center gap-3"
-        >
-          Learn More <FontAwesomeIcon icon={faChevronRight} />
-        </a>
+        <LearnMoreButton to={linkSrc}>Learn More</LearnMoreButton>
       </div>
     </div>
   );

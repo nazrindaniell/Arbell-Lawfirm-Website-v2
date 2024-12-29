@@ -4,8 +4,7 @@ import Faq from "../components/Faq";
 import GalleryHeader from "../components/GalleryHeader";
 import GalleryImg from "../assets/sample-img.webp";
 import HeaderImg from "../assets/hero-header.webp";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import LearnMoreButton from "../components/LearnMoreButton";
 
 function About() {
   return (
@@ -33,12 +32,7 @@ function About() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
                 massa mi.Aliquam in hendrerit urna. Pellentesque sit amet sapien
               </p>
-              <a
-                href="#"
-                className="learn-more-btn flex w-fit items-center justify-center gap-3"
-              >
-                Learn more <FontAwesomeIcon icon={faChevronRight} />
-              </a>
+              <LearnMoreButton to="#">Learn More</LearnMoreButton>
             </div>
             <div className="h-96 w-full">
               <img
@@ -63,12 +57,7 @@ function About() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
                 massa mi.Aliquam in hendrerit urna. Pellentesque sit amet sapien{" "}
               </p>
-              <a
-                href="#"
-                className="learn-more-btn flex w-fit items-center justify-center gap-3"
-              >
-                Learn more <FontAwesomeIcon icon={faChevronRight} />
-              </a>
+              <LearnMoreButton to="#">Learn More</LearnMoreButton>
             </div>
           </div>
         </div>
