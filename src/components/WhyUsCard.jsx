@@ -13,9 +13,9 @@ function WhyUsCard({ number, title, description, imgSrc, linkSrc, reverse }) {
         />
       </div>
       <div className="flex flex-col gap-3 p-4">
-        <h1 className="font-serif text-3xl text-orange lg:text-4xl">
+        <h2 className="font-serif text-3xl text-orange lg:text-4xl">
           {number}
-        </h1>
+        </h2>
         <h4 className="font-serif text-xl lg:text-2xl">{title}</h4>
         <p className="text-base text-black-200 lg:text-lg">{description}</p>
         <LearnMoreButton to={linkSrc}>Learn More</LearnMoreButton>

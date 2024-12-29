@@ -24,14 +24,16 @@ function Navbar() {
               />
             </Link>
           </div>
-          <div className="hidden justify-between gap-6 lg:flex">
+          <div className="hidden justify-between gap-6 lg:flex [&_*]:text-lg">
             <Link to="/about">About Us</Link>
             <Link to="/lawyers">Our Lawyers</Link>
             <Link to="/services">Our Services</Link>
             <Link to="/blog">Publication & Updates</Link>
           </div>
           <div className="contact-btn hidden lg:block">
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/contact" className="text-lg">
+              Contact Us
+            </Link>
           </div>
           <div className="lg:hidden">
             <button onClick={toggleMenu}>
