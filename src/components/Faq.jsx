@@ -38,7 +38,7 @@ function Faq() {
             >
               <div className="flex items-center justify-between gap-3">
                 <p
-                  className="w-full cursor-pointer font-medium"
+                  className="w-full cursor-pointer text-base font-medium lg:text-lg"
                   onClick={() => toggleFaq(index)}
                 >
                   {faq.heading}
@@ -49,7 +49,11 @@ function Faq() {
                   className="cursor-pointer"
                 />
               </div>
-              {activeIndex === index && <p>{faq.answer}</p>}
+              {activeIndex === index && (
+                <p className="text-base text-black-200 lg:text-lg">
+                  {faq.answer}
+                </p>
+              )}
             </div>
           ))}
         </div>
