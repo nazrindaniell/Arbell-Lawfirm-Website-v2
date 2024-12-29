@@ -12,7 +12,7 @@ function Services() {
       {/* Header */}
       <section className="container mx-auto py-12 lg:py-20">
         <Header
-          heading="Our Serices"
+          heading="Our Services."
           subheading="Your Path to Legal Resolution."
           desc="At Arbell, we provide a complete suite of legal services designed to resolve disputes and protect your interests. Whether navigating complex litigation, reaching strategic agreements through negotiation, or finding common ground in mediation, our experts are here to support you. With a commitment to excellence and a focus on tailored solutions, we help you move forward confidently, no matter the challenge."
         />

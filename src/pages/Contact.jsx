@@ -3,6 +3,8 @@ import GalleryHeader from "../components/GalleryHeader";
 import GalleryImg from "../assets/sample-img.webp";
 import ContactDetails from "../components/ContactDetails";
 import ContactSocialMedia from "../components/ContactSocialMedia";
+import Partnership from "../components/Partnership";
+import Faq from "../components/Faq";
 
 function Contact() {
   return (
@@ -25,6 +27,14 @@ function Contact() {
           <ContactDetails />
           <ContactSocialMedia />
         </div>
+      </section>
+      {/* who trusted us */}
+      <section className="my-6 border-y border-white-300 lg:my-14">
+        <Partnership />
+      </section>
+      {/* faq */}
+      <section className="container mx-auto mb-8 py-8 lg:mb-14">
+        <Faq />
       </section>
     </>
   );

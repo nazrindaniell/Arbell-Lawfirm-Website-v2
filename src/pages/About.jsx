@@ -28,7 +28,7 @@ function About() {
           <div className="grid grid-cols-1 place-items-center gap-10 lg:grid-cols-2">
             <div className="flex flex-col gap-4">
               <h2 className="font-serif text-3xl lg:text-4xl">Our Vision.</h2>
-              <p>
+              <p className="text-base text-black-200 lg:text-lg">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
                 massa mi.Aliquam in hendrerit urna. Pellentesque sit amet sapien
               </p>
@@ -47,15 +47,15 @@ function About() {
             <div className="h-96 w-full">
               <img
                 src={GalleryImg}
-                alt="Our Vision Img"
+                alt="Our Mission Img"
                 className="h-full w-full object-cover object-center"
               />
             </div>
             <div className="order-first flex flex-col gap-4 lg:order-last">
-              <h2 className="font-serif text-3xl lg:text-4xl">Our Vision.</h2>
-              <p>
+              <h2 className="font-serif text-3xl lg:text-4xl">Our Mission.</h2>
+              <p className="text-base text-black-200 lg:text-lg">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                massa mi.Aliquam in hendrerit urna. Pellentesque sit amet sapien{" "}
+                massa mi.Aliquam in hendrerit urna. Pellentesque sit amet sapien
               </p>
               <LearnMoreButton to="#">Learn More</LearnMoreButton>
             </div>
