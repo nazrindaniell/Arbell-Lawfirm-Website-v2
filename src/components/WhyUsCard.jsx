@@ -17,7 +17,7 @@ function WhyUsCard({ number, title, description, imgSrc, linkSrc, reverse }) {
           {number}
         </h1>
         <h4 className="font-serif text-xl lg:text-2xl">{title}</h4>
-        <p>{description}</p>
+        <p className="text-base text-black-200 lg:text-lg">{description}</p>
         <LearnMoreButton to={linkSrc}>Learn More</LearnMoreButton>
       </div>
     </div>
