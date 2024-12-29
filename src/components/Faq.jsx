@@ -24,7 +24,7 @@ function Faq() {
           <h4 className="font-serif text-xl lg:text-2xl">
             Lorem ipsum dolor sit amet, consectetur
           </h4>
-          <p>
+          <p className="text-base text-black-200 lg:text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa
             mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
             fringilla, mattis ligula consectetur, ultrices mauris.
