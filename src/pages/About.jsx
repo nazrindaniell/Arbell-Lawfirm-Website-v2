@@ -1,9 +1,9 @@
 import Header from "../components/Header";
-import Partnership from "../components/Partnership";
-import Faq from "../components/Faq";
 import GalleryHeader from "../components/GalleryHeader";
 import GalleryImg from "../assets/sample-img.webp";
 import HeaderImg from "../assets/hero-header.webp";
+import Partnership from "../components/Partnership";
+import Faq from "../components/Faq";
 import LearnMoreButton from "../components/LearnMoreButton";
 
 function About() {

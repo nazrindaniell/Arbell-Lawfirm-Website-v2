@@ -69,12 +69,7 @@ function Home() {
       </section>
       {/* who trusted us */}
       <section className="my-6 border-y border-white-300 lg:my-14">
-        <Partnership
-          img1={HeaderImg}
-          img2={HeaderImg}
-          img3={HeaderImg}
-          img4={HeaderImg}
-        />
+        <Partnership />
       </section>
       {/* faq */}
       <section className="container mx-auto mb-8 py-8 lg:mb-14">
