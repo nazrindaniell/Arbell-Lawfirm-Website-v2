@@ -8,7 +8,9 @@ function Header({ heading, subheading, desc }) {
         <h4 className="text-center font-serif text-lg font-medium lg:text-xl">
           {subheading}
         </h4>
-        <p className="text-center">{desc}</p>
+        <p className="text-center text-base text-black-200 lg:text-lg">
+          {desc}
+        </p>
       </div>
     </>
   );
