@@ -15,9 +15,9 @@ function LawyerProfile({ imgSrc, name, title, desc, linkedIn, instagram }) {
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-1">
           <h1 className="font-serif text-3xl lg:text-4xl">{name}</h1>
-          <h4 className="text-lg font-medium lg:text-xl">{title}</h4>
+          <h4 className="text-lg lg:text-xl">{title}</h4>
         </div>
-        <div>{desc}</div>
+        <p className="text-base text-black-200 lg:text-lg">{desc}</p>
         <div className="flex gap-4">
           <a href={linkedIn}>
             <FontAwesomeIcon icon={faLinkedinIn} size="xl" />
