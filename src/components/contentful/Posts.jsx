@@ -1,5 +1,5 @@
-import usePosts from "../hooks/usePosts";
-import LearnMoreButton from "../components/LearnMoreButton";
+import usePosts from "../../hooks/usePosts";
+import LearnMoreButton from "../LearnMoreButton";
 
 function Posts() {
   const [posts, isLoading] = usePosts();

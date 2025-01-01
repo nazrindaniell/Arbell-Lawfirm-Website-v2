@@ -1,5 +1,5 @@
-import LearnMoreButton from "../components/LearnMoreButton";
-import useLatestBlogPost from "../hooks/useLatestSinglePost";
+import LearnMoreButton from "../LearnMoreButton";
+import useLatestBlogPost from "../../hooks/useLatestSinglePost";
 
 function LatestBlogPost() {
   const [posts, isLoading] = useLatestBlogPost();

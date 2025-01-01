@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { useSinglePost } from "../hooks/useSinglePost";
+import { useSinglePost } from "../../hooks/useSinglePost";
 
 function SinglePost() {
   const { id } = useParams();

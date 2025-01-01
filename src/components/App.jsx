@@ -6,7 +6,7 @@ import About from "../pages/About";
 import Lawyers from "../pages/Lawyers";
 import Services from "../pages/Services";
 import Blog from "../pages/Blog";
-import SinglePost from "../pages/SingleBlog";
+import SinglePost from "../components/contentful/SingleBlog";
 
 function App() {
   return (
