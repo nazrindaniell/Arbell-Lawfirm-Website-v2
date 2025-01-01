@@ -12,4 +12,7 @@
   .mobile-menu {
     @apply mt-4 flex flex-col items-center gap-5;
   }
+  .shape-outside {
+    shape-outside: polygon(10% 10% 10% 10%);
+  }
 }
