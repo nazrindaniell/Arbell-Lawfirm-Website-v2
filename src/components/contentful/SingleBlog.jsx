@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getSinglePost } from "/contentful";
+import Posts from "./Posts";
 
 function SinglePost() {
   const { id } = useParams();
@@ -50,14 +51,17 @@ function SinglePost() {
 
   return (
     <>
-      <div className="container mx-auto my-8">
+      <section className="container mx-auto my-8">
         <div className="flex flex-col gap-8">
           <Link className="" to="/blog">
             {"< Back"}
           </Link>
           {renderPost()}
         </div>
-      </div>
+        <div className="my-28">
+          <Posts />
+        </div>
+      </section>
     </>
   );
 }
