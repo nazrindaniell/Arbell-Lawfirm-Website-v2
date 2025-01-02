@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import LearnMoreButton from "../LearnMoreButton";
 import { getBlogPosts } from "/contentful";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { RiArrowRightSFill, RiArrowLeftSFill } from "react-icons/ri";
 
 import "swiper/css";

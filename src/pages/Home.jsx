@@ -72,7 +72,8 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="max-auto container mb-10 mt-6 lg:mb-20 lg:mt-12">
+      {/* Blog section */}
+      <section className="container mx-auto mb-10 mt-6 lg:mb-20 lg:mt-12">
         <Posts />
       </section>
       {/* who trusted us */}
