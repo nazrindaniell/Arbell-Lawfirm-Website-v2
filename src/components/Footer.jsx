@@ -4,6 +4,7 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <>
       <footer className="bg-white-200">
@@ -12,7 +13,7 @@ function Footer() {
             <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-2">
               <div className="flex w-full flex-col gap-4 lg:w-[60%]">
                 <img src={FooterLogo} alt="Arbell Logo" className="w-36" />
-                <p>
+                <p className="text-base text-black-200 lg:text-lg">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor
                 </p>
@@ -20,10 +21,10 @@ function Footer() {
               <div className="flex flex-col gap-6 lg:flex-row">
                 <div className="flex flex-1 flex-col gap-3 lg:gap-5">
                   <h4 className="font-serif text-lg lg:text-2xl">Contact Us</h4>
-                  <div className="flex flex-col gap-1">
-                    <a href="">+62-821-7890</a>
-                    <a href="">hello@arbell.com</a>
-                    <a href="">Tower 2 Sentrum, South Jakarta</a>
+                  <div className="flex flex-col gap-1 [&>a]:text-base [&>a]:text-black-200 lg:[&>a]:text-lg">
+                    <a href="#">+62-821-7890</a>
+                    <a href="#">hello@arbell.com</a>
+                    <a href="#">Tower 2 Sentrum, South Jakarta</a>
                   </div>
                 </div>
                 <div className="flex flex-1 flex-col gap-5">
@@ -31,7 +32,9 @@ function Footer() {
                     <h4 className="font-serif text-lg lg:text-2xl">
                       Connect with us
                     </h4>
-                    <p>Let's stay connected, reach out anytime!</p>
+                    <p className="text-base text-black-200 lg:text-lg">
+                      Let's stay connected, reach out anytime!
+                    </p>
                   </div>
                   <div className="flex gap-3">
                     <a
@@ -61,8 +64,8 @@ function Footer() {
           </div>
           <div className="border-t border-white-400">
             <div className="container mx-auto py-4">
-              <p className="text-center md:text-right">
-                &copy; 2024 Arbell Consultant, All rights reserved.
+              <p className="text-center text-base text-black-200 md:text-right lg:text-lg">
+                &copy; {currentYear} Arbell Consultant, All rights reserved.
               </p>
             </div>
           </div>
