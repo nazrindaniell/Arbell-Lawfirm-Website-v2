@@ -15,4 +15,32 @@
   .shape-outside {
     shape-outside: polygon(10% 10% 10% 10%);
   }
+  .custom-swiper-button-prev,
+  .custom-swiper-button-next {
+    @apply absolute top-1/2 z-10 -translate-y-1/2 transform cursor-pointer;
+  }
+  .custom-swiper-button-prev {
+    @apply -left-24;
+  }
+  .custom-swiper-button-next {
+    @apply -right-24;
+  }
+  @screen lg {
+    .custom-swiper-button-prev,
+    .custom-swiper-button-next {
+      @apply block;
+    }
+    .swiper-pagination {
+      @apply hidden;
+    }
+  }
+  @screen sm {
+    .custom-swiper-button-prev,
+    .custom-swiper-button-next {
+      @apply hidden;
+    }
+    .swiper-pagination {
+      @apply block;
+    }
+  }
 }
