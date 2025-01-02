@@ -5,7 +5,7 @@ function WhyUsCard({ number, title, description, imgSrc, linkSrc, reverse }) {
     <div
       className={`flex ${reverse ? "flex-col lg:flex-col-reverse" : "flex-col"}`}
     >
-      <div className="h-full w-full">
+      <div className="md:aspect-square">
         <img
           src={imgSrc}
           alt={title}
