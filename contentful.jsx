@@ -5,25 +5,26 @@ const client = createClient({
   accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN,
 });
 
-const getBlogPosts = () =>
-  client
-    .getEntries({ content_type: "blogPost" })
-    .then((response) => response.items);
+const getBlogPosts = async () => {
+  const response = await client.getEntries({ content_type: "blogPost" });
+  return response.items;
+};
 
-const getSinglePost = (slug) =>
-  client
-    .getEntries({
-      content_type: "blogPost",
-      "fields.slug": slug,
-    })
-    .then((response) => response.items);
+const getSinglePost = async (slug) => {
+  const response = await client.getEntries({
+    content_type: "blogPost",
+    "fields.slug": slug,
+  });
+  return response.items;
+};
 
-const getLatestBlogPost = () =>
-  client
-    .getEntries({
-      content_type: "blogPost",
-      limit: 1,
-    })
-    .then((response) => response.items);
+const getLatestBlogPost = async () => {
+  const response = await client.getEntries({
+    content_type: "blogPost",
+    order: "-sys.createdAt",
+    limit: 1,
+  });
+  return response.items[0];
+};
 
 export { getBlogPosts, getSinglePost, getLatestBlogPost };

@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 import { getBlogPosts } from "/contentful";
 
-const promise = getBlogPosts();
-
 export default function usePosts() {
   const [posts, setPosts] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    promise.then((blogPosts) => {
+    const fetchPosts = async () => {
+      const blogPosts = await getBlogPosts();
       setPosts(blogPosts);
       setLoading(false);
-    });
+    };
+
+    fetchPosts();
   }, []);
 
   return [posts, isLoading];

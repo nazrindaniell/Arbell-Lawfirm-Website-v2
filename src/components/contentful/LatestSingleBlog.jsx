@@ -1,8 +1,20 @@
+import { useState, useEffect } from "react";
 import LearnMoreButton from "../LearnMoreButton";
-import useLatestBlogPost from "../../hooks/useLatestSinglePost";
+import { getLatestBlogPost } from "/contentful";
 
 function LatestBlogPost() {
-  const [posts, isLoading] = useLatestBlogPost();
+  const [post, setPost] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      const fetchedPost = await getLatestBlogPost();
+      setPost(fetchedPost);
+      setIsLoading(false);
+    };
+
+    fetchPost();
+  }, []);
 
   const renderPost = () => {
     if (isLoading)
@@ -23,7 +35,7 @@ function LatestBlogPost() {
         </div>
       );
 
-    return posts.map((post) => (
+    return (
       <div className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-10">
         <div className="">
           <img
@@ -43,7 +55,7 @@ function LatestBlogPost() {
           </LearnMoreButton>
         </div>
       </div>
-    ));
+    );
   };
 
   return renderPost();

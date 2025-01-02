@@ -1,9 +1,21 @@
 import { Link, useParams } from "react-router-dom";
-import { useSinglePost } from "../../hooks/useSinglePost";
+import { useState, useEffect } from "react";
+import { getSinglePost } from "/contentful";
 
 function SinglePost() {
   const { id } = useParams();
-  const [post, isLoading] = useSinglePost(id);
+  const [post, setPost] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      const fetchedPost = await getSinglePost(id);
+      setPost(fetchedPost[0]);
+      setIsLoading(false);
+    };
+
+    fetchPost();
+  }, [id]);
 
   const renderPost = () => {
     if (isLoading) return <p>Loading...</p>;
@@ -11,15 +23,17 @@ function SinglePost() {
     return (
       <>
         <div className="flex flex-col gap-10">
-          <h2 className="font-serif text-3xl lg:text-4xl">{post.title}</h2>
+          <h2 className="font-serif text-3xl lg:text-4xl">
+            {post.fields.title}
+          </h2>
           <div className="flex flex-col gap-8 md:block">
             <img
               className="shape-outside float-left h-full w-full object-cover object-center lg:mb-10 lg:mr-10 lg:h-[500px] lg:w-[500px]"
-              src={post.image.fields.file.url}
-              alt={post.title}
+              src={post.fields.image.fields.file.url}
+              alt={post.fields.title}
             />
             <p className="text-justify text-base text-black-200 lg:text-xl">
-              {post.paragraph}
+              {post.fields.paragraph}
             </p>
           </div>
         </div>

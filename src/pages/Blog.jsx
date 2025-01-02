@@ -23,7 +23,7 @@ function Blog() {
         <GalleryHeader imgSrc={GalleryImg} />
       </section>
 
-      {/* Blog Posts */}
+      {/* Latest Blog Posts */}
       <section className="container mx-auto mt-16 py-10 lg:mb-8 lg:mt-24 lg:py-20">
         <div className="flex flex-col gap-10">
           <h1 className="font-serif text-4xl lg:text-5xl">Latest Updates.</h1>
