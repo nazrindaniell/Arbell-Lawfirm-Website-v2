@@ -13,7 +13,7 @@ function ServicesCard({ imgSrc, heading, desc }) {
           </h3>
         </div>
         <div>
-          <p className="text-black-200">{desc}</p>
+          <p className="text-base text-black-200 lg:text-lg">{desc}</p>
         </div>
       </div>
     </>
