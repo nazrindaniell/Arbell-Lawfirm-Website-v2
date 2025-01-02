@@ -39,7 +39,7 @@ function SinglePost() {
               src={post.fields.image.fields.file.url}
               alt={post.fields.title}
             />
-            <p className="text-justify text-base text-black-200 lg:text-xl">
+            <p className="text-justify text-base text-black-200 lg:text-lg">
               {post.fields.paragraph}
             </p>
           </div>
