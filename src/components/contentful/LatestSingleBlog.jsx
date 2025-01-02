@@ -5,12 +5,18 @@ import { getLatestBlogPost } from "/contentful";
 function LatestBlogPost() {
   const [post, setPost] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchPost = async () => {
-      const fetchedPost = await getLatestBlogPost();
-      setPost(fetchedPost);
-      setIsLoading(false);
+      try {
+        const fetchedPost = await getLatestBlogPost();
+        setPost(fetchedPost);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setIsLoading(false);
+      }
     };
 
     fetchPost();
@@ -34,6 +40,8 @@ function LatestBlogPost() {
           </div>
         </div>
       );
+
+    if (error) return <p>Error: {error}</p>;
 
     return (
       <div className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-10">

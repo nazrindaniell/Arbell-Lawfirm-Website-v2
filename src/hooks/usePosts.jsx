@@ -4,16 +4,22 @@ import { getBlogPosts } from "/contentful";
 export default function usePosts() {
   const [posts, setPosts] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const blogPosts = await getBlogPosts();
-      setPosts(blogPosts);
-      setLoading(false);
+      try {
+        const blogPosts = await getBlogPosts();
+        setPosts(blogPosts);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchPosts();
   }, []);
 
-  return [posts, isLoading];
+  return [posts, isLoading, error];
 }

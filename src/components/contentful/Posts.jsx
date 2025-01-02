@@ -5,12 +5,18 @@ import { getBlogPosts } from "/contentful";
 function Posts() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const fetchedPosts = await getBlogPosts();
-      setPosts(fetchedPosts);
-      setLoading(false);
+      try {
+        const fetchedPosts = await getBlogPosts();
+        setPosts(fetchedPosts);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchPosts();
@@ -18,6 +24,7 @@ function Posts() {
 
   const renderPosts = () => {
     if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error}</p>;
 
     return posts.map((post) => (
       <div className="flex flex-1" key={post.sys.id}>
@@ -30,7 +37,7 @@ function Posts() {
           <h3 className="line-clamp-1 font-serif text-2xl lg:text-3xl">
             {post.fields.title}
           </h3>
-          <p className="line-clamp-5 text-base text-black-200 lg:text-xl">
+          <p className="line-clamp-5 text-base text-black-200 lg:text-lg">
             {post.fields.paragraph}
           </p>
           <LearnMoreButton to={post.fields.slug}>Learn More</LearnMoreButton>

@@ -6,25 +6,40 @@ const client = createClient({
 });
 
 const getBlogPosts = async () => {
-  const response = await client.getEntries({ content_type: "blogPost" });
-  return response.items;
+  try {
+    const response = await client.getEntries({ content_type: "blogPost" });
+    return response.items;
+  } catch (error) {
+    console.error("Error fetching blog posts:", error);
+    throw error;
+  }
 };
 
 const getSinglePost = async (slug) => {
-  const response = await client.getEntries({
-    content_type: "blogPost",
-    "fields.slug": slug,
-  });
-  return response.items;
+  try {
+    const response = await client.getEntries({
+      content_type: "blogPost",
+      "fields.slug": slug,
+    });
+    return response.items;
+  } catch (error) {
+    console.error(`Error fetching post with slug ${slug}:`, error);
+    throw error;
+  }
 };
 
 const getLatestBlogPost = async () => {
-  const response = await client.getEntries({
-    content_type: "blogPost",
-    order: "-sys.createdAt",
-    limit: 1,
-  });
-  return response.items[0];
+  try {
+    const response = await client.getEntries({
+      content_type: "blogPost",
+      order: "-sys.createdAt",
+      limit: 1,
+    });
+    return response.items[0];
+  } catch (error) {
+    console.error("Error fetching latest blog post:", error);
+    throw error;
+  }
 };
 
 export { getBlogPosts, getSinglePost, getLatestBlogPost };

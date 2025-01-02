@@ -6,12 +6,18 @@ function SinglePost() {
   const { id } = useParams();
   const [post, setPost] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchPost = async () => {
-      const fetchedPost = await getSinglePost(id);
-      setPost(fetchedPost[0]);
-      setIsLoading(false);
+      try {
+        const fetchedPost = await getSinglePost(id);
+        setPost(fetchedPost[0]);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setIsLoading(false);
+      }
     };
 
     fetchPost();
@@ -19,6 +25,7 @@ function SinglePost() {
 
   const renderPost = () => {
     if (isLoading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error}</p>;
 
     return (
       <>
