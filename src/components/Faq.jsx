@@ -11,13 +11,13 @@ function Faq() {
   };
 
   return (
-    <div className="grid grid-cols-1 place-items-start gap-10 lg:grid-cols-2">
+    <div className="grid grid-cols-1 place-items-start gap-6 lg:grid-cols-2">
       <div>
         <p className="font-semibold">FAQ</p>
-        <h2 className="w-full font-serif text-3xl lg:w-[40%] lg:text-4xl">
+        <h1 className="w-full font-serif text-4xl lg:w-[40%] lg:text-5xl">
           Frequently asked
           <span className="font-serif text-orange"> questions.</span>
-        </h2>
+        </h1>
       </div>
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-3">
