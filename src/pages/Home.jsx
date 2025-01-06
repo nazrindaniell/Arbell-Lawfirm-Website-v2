@@ -20,12 +20,11 @@ function Home() {
             head-on.
           </h1>
           <p className="text-base text-black-200 lg:text-lg">
-            Our expert legal audit consultants help you
+            Our expert legal audit consultants help you{" "}
             <span className="font-bold text-black">
               stay compliant, reduce risk,
-            </span>
-            and
-            <span className="font-bold text-black"> focus on growth.</span>
+            </span>{" "}
+            and <span className="font-bold text-black"> focus on growth.</span>{" "}
             Secure your future with confidence partner with us.
           </p>
           <LearnMoreButton to="#">Learn More</LearnMoreButton>
