@@ -33,8 +33,8 @@ function Lawyers() {
           {/* Lawyer Profile 1*/}
           <LawyerProfile
             imgSrc={LawyerImg}
-            name="Nazrin Daniel"
-            title="Web Developer"
+            name="Martin Octavianus"
+            title="10+ years in corporate law, expert in mergers and acquisitions"
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien"
             linkedIn="https://www.linkedin.com/in/nazrindaniell/"
             instagram="https://www.instagram.com/nazrindaniell/"
@@ -42,17 +42,8 @@ function Lawyers() {
           {/* Lawyer Profile 2*/}
           <LawyerProfile
             imgSrc={LawyerImg2}
-            name="Nazrin Daniel"
-            title="Web Developer"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien"
-            linkedIn="#"
-            instagram="#"
-          />
-          {/* Lawyer Profile 3*/}
-          <LawyerProfile
-            imgSrc={LawyerImg}
-            name="Nazrin Daniel"
-            title="Web Developer"
+            name="H.A.P Sianturi SH,LL.M"
+            title="10+ years in investigative auditor, expert in dispute resolution"
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien"
             linkedIn="#"
             instagram="#"
