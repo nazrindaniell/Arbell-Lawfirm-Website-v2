@@ -36,7 +36,7 @@ function Home() {
       </section>
       {/* why us */}
       <section className="container mx-auto py-8 lg:flex">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-8">
           <h1 className="font-serif text-4xl font-bold lg:text-5xl">Why us?</h1>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
             <WhyUsCard

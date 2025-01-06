@@ -12,7 +12,7 @@ function Footer() {
           <div className="container mx-auto flex flex-col items-center justify-center gap-10 py-10">
             <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-2">
               <div className="flex w-full flex-col gap-4 lg:w-[60%]">
-                <img src={FooterLogo} alt="Arbell Logo" className="w-36" />
+                <img src={FooterLogo} alt="Arbell Logo" className="h-10 w-36" />
                 <p className="text-base text-black-200 lg:text-lg">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor
