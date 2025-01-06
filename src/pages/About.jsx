@@ -5,8 +5,13 @@ import HeaderImg from "../assets/hero-header.webp";
 import Partnership from "../components/Partnership";
 import Faq from "../components/Faq";
 import LearnMoreButton from "../components/LearnMoreButton";
+import { useEffect } from "react";
 
 function About() {
+  useEffect(() => {
+    document.title = "About Us - Arbell";
+  }, []);
+
   return (
     <>
       {/* Header */}

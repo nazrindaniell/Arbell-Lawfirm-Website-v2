@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "../components/Header";
 import GalleryHeader from "../components/GalleryHeader";
 import GalleryImg from "../assets/sample-img.webp";
@@ -8,6 +9,9 @@ import Posts from "../components/contentful/Posts";
 import LatestBlogPost from "../components/contentful/LatestSingleBlog";
 
 function Blog() {
+  useEffect(() => {
+    document.title = "Blog - Arbell";
+  }, []);
   return (
     <>
       {/* Header */}

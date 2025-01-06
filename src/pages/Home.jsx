@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import HeaderImg from "../assets/hero-header.webp";
 import SampleImg from "../assets/sample-img.webp";
 import WhyUsCard from "../components/WhyUsCard";
@@ -7,6 +8,9 @@ import LearnMoreButton from "../components/LearnMoreButton";
 import Posts from "../components/contentful/Posts";
 
 function Home() {
+  useEffect(() => {
+    document.title = "Home - Arbell";
+  }, []);
   return (
     <>
       <section className="container mx-auto py-8 lg:flex">
