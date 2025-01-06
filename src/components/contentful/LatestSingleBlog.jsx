@@ -11,7 +11,11 @@ function LatestBlogPost() {
     const fetchPost = async () => {
       try {
         const fetchedPost = await getLatestBlogPost();
-        setPost(fetchedPost);
+        if (fetchedPost) {
+          setPost(fetchedPost);
+        } else {
+          setError("No blog post available at the moment.");
+        }
       } catch (err) {
         setError(err.message);
       } finally {

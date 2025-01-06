@@ -18,7 +18,11 @@ function Posts() {
     const fetchPosts = async () => {
       try {
         const fetchedPosts = await getBlogPosts();
-        setPosts(fetchedPosts);
+        if (fetchedPosts.length === 0) {
+          setError("No blog post available at the moment");
+        } else {
+          setPosts(fetchedPosts);
+        }
       } catch (err) {
         setError(err.message);
       } finally {
