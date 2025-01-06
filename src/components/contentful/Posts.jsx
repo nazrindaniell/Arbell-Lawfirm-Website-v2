@@ -46,7 +46,7 @@ function Posts() {
               {post.fields.title}
             </h3>
             <p className="line-clamp-5 text-base text-black-200 lg:text-lg">
-              {post.fields.paragraph}
+              {post.fields.description}
             </p>
             <LearnMoreButton to={`/blog/${post.fields.slug}`}>
               Learn More

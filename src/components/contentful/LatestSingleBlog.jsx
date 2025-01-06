@@ -56,7 +56,7 @@ function LatestBlogPost() {
             {post.fields.title}
           </h2>
           <p className="line-clamp-5 text-base text-black-200 lg:text-lg">
-            {post.fields.paragraph}
+            {post.fields.description}
           </p>
           <LearnMoreButton key={post.fields.id} to={post.fields.slug}>
             Learn More

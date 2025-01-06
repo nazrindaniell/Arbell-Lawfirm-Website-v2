@@ -41,7 +41,7 @@ function SinglePost() {
               alt={post.fields.title}
             />
             <p className="text-justify text-base text-black-200 lg:text-lg">
-              {post.fields.paragraph}
+              {post.fields.description}
             </p>
           </div>
         </div>
