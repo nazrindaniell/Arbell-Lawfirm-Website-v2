@@ -41,7 +41,7 @@ function Navbar() {
           </div>
         </div>
         {isOpen && (
-          <div className="mt-4 flex flex-col items-center gap-4 lg:hidden">
+          <div className="absolute mt-4 flex w-full flex-col items-center gap-4 border-t border-t-orange bg-white p-4 shadow lg:hidden">
             <Link to="/about" onClick={toggleMenu}>
               About Us
             </Link>
