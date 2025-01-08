@@ -6,7 +6,7 @@ function LearnMoreButton({ to, children }) {
   return (
     <Link
       to={to}
-      className="learn-more-btn flex w-fit items-center justify-center gap-3"
+      className="learn-more-btn flex w-fit items-center justify-center gap-3 text-base lg:text-lg"
     >
       {children} <FontAwesomeIcon icon={faChevronRight} />
     </Link>

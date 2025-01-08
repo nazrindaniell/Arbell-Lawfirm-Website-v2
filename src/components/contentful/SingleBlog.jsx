@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getSinglePost } from "/contentful";
+import BackButton from "../BackButton";
 import Posts from "./Posts";
 
 function SinglePost() {
@@ -52,9 +53,9 @@ function SinglePost() {
   return (
     <>
       <section className="container mx-auto my-8">
-        <div className="flex flex-col gap-8">
-          <Link className="" to="/blog">
-            {"< Back"}
+        <div className="flex flex-col gap-5">
+          <Link className="w-fit" to="/blog">
+            <BackButton>Back</BackButton>
           </Link>
           {renderPost()}
         </div>
