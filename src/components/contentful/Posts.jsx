@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import LearnMoreButton from "../LearnMoreButton";
 import { getBlogPosts } from "/contentful";
-import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 import { RiArrowRightSFill, RiArrowLeftSFill } from "react-icons/ri";
 
 import "swiper/css";
@@ -42,7 +42,7 @@ function Posts() {
         <div className="flex flex-1">
           <div className="flex flex-1 flex-col justify-between gap-5">
             <img
-              className="w-full object-cover object-center lg:h-72"
+              className="h-60 w-full object-cover object-center md:h-80 lg:h-72"
               src={post.fields.image.fields.file.url}
               alt={post.fields.title}
             />
@@ -66,38 +66,47 @@ function Posts() {
       <h1 className="font-serif text-4xl lg:text-5xl">More Updates.</h1>
       <div className="relative w-full">
         <Swiper
-          // install Swiper modules
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={50}
           slidesPerView={2}
           pagination={{
+            enabled: true,
             clickable: true,
+            type: "bullets",
             el: ".swiper-pagination",
           }}
           breakpoints={{
             320: {
-              slidesPerView: 1,
               pagination: {
+                enabled: true,
                 clickable: true,
               },
-              navigation: false,
-              autoHeight: true,
+              navigation: {
+                enabled: false,
+              },
+              slidesPerView: 1,
             },
             1024: {
-              slidesPerView: 2,
-              pagination: false,
               navigation: {
+                enabled: true,
                 nextEl: ".custom-swiper-button-next",
                 prevEl: ".custom-swiper-button-prev",
               },
+              pagination: {
+                enabled: false,
+              },
+              slidesPerView: 2,
             },
             1280: {
-              slidesPerView: 3,
-              pagination: false,
               navigation: {
+                enabled: true,
                 nextEl: ".custom-swiper-button-next",
                 prevEl: ".custom-swiper-button-prev",
               },
+              pagination: {
+                enabled: false,
+              },
+              slidesPerView: 3,
             },
           }}
         >
@@ -109,7 +118,7 @@ function Posts() {
         <div className="custom-swiper-button-next hidden lg:block">
           <RiArrowRightSFill size={80} />
         </div>
-        <div className="swiper-pagination !-bottom-12 block lg:hidden"></div>
+        <div className="swiper-pagination"></div>
       </div>
     </div>
   );
