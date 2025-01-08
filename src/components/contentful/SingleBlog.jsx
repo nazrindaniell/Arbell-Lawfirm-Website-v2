@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getSinglePost } from "/contentful";
 import BackButton from "../BackButton";
@@ -54,9 +54,7 @@ function SinglePost() {
     <>
       <section className="container mx-auto my-8">
         <div className="flex flex-col gap-5">
-          <Link className="w-fit" to="/blog">
-            <BackButton>Back</BackButton>
-          </Link>
+          <BackButton>Back</BackButton>
           {renderPost()}
         </div>
         <div className="my-28">
