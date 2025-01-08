@@ -34,7 +34,7 @@ function Home() {
         </div>
         <div className="flex items-center justify-center">
           <LazyLoadImage
-            src={HeaderImg}
+            src={HeaderImg480w}
             srcSet={`${HeaderImg480w} 480w, ${HeaderImg} 960w`}
             alt="Header Img"
             className="mx-auto h-full w-96 object-cover object-center lg:w-[600px]"
