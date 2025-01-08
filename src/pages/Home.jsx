@@ -76,11 +76,11 @@ function Home() {
         </div>
       </section>
       {/* Blog section */}
-      <section className="container mx-auto mb-10 mt-6 lg:mb-20 lg:mt-12">
+      <section className="container mx-auto my-12 lg:my-24">
         <Posts />
       </section>
       {/* who trusted us */}
-      <section className="mb-6 mt-24 border-y border-white-300 lg:my-14">
+      <section className="my-12 border-y border-white-300 lg:my-16">
         <Partnership />
       </section>
       {/* faq */}

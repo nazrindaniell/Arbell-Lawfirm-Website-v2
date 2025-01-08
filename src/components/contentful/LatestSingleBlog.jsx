@@ -49,12 +49,11 @@ function LatestBlogPost() {
 
     return (
       <div className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-10">
-        <div className="">
-          <img
-            src={post.fields.image.fields.file.url}
-            alt={post.fields.title}
-          />
-        </div>
+        <img
+          className="h-60 w-full object-cover object-center md:h-80 lg:h-96"
+          src={post.fields.image.fields.file.url}
+          alt={post.fields.title}
+        />
         <div className="flex flex-col gap-6">
           <h2 className="font-serif text-3xl lg:text-4xl">
             {post.fields.title}

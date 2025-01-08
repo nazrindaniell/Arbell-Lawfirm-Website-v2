@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  :root {
+    --swiper-pagination-color: #ef7324 !important;
+  }
   .contact-btn {
     @apply rounded-full bg-orange px-5 py-2 text-white;
   }
@@ -25,22 +28,7 @@
   .custom-swiper-button-next {
     @apply -right-24;
   }
-  @screen lg {
-    .custom-swiper-button-prev,
-    .custom-swiper-button-next {
-      @apply block;
-    }
-    .swiper-pagination {
-      @apply hidden;
-    }
-  }
-  @screen sm {
-    .custom-swiper-button-prev,
-    .custom-swiper-button-next {
-      @apply hidden;
-    }
-    .swiper-pagination {
-      @apply block;
-    }
+  .swiper-pagination {
+    @apply !relative left-1/2 mt-7 -translate-x-1/2 transform;
   }
 }

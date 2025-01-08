@@ -28,7 +28,7 @@ function Blog() {
       </section>
 
       {/* Latest Blog Posts */}
-      <section className="container mx-auto mt-16 py-10 lg:mb-8 lg:mt-24 lg:py-20">
+      <section className="container mx-auto mt-16 py-10 lg:mt-24 lg:pt-20">
         <div className="flex flex-col gap-8">
           <h1 className="font-serif text-4xl lg:text-5xl">Latest Updates.</h1>
           <LatestBlogPost />
@@ -36,12 +36,12 @@ function Blog() {
       </section>
 
       {/* Blog section */}
-      <section className="container mx-auto mb-10 mt-6 lg:mb-20 lg:mt-12">
+      <section className="container mx-auto my-12 lg:my-24">
         <Posts />
       </section>
 
       {/* who trusted us */}
-      <section className="mb-6 mt-24 border-y border-white-300 lg:my-14">
+      <section className="my-12 border-y border-white-300 lg:my-16">
         <Partnership />
       </section>
       {/* faq */}

@@ -30,6 +30,7 @@ export default {
       },
       aspectRatio: {
         "3/2": 3 / 2,
+        "5/2": 5 / 2,
       },
     },
     extend: {},
