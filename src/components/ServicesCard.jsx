@@ -13,6 +13,7 @@ function ServicesCard({ imgSrc, heading, desc }) {
             width={"100%"}
             height={"100%"}
             effect="blur"
+            loading="lazy"
           />
           <h3 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform bg-white px-5 py-2 font-serif text-2xl lg:text-3xl">
             {heading}

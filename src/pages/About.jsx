@@ -49,6 +49,7 @@ function About() {
                 width={"100%"}
                 height={"100%"}
                 effect="blur"
+                loading="lazy"
               />
             </div>
           </div>
@@ -62,6 +63,7 @@ function About() {
                 width={"100%"}
                 height={"100%"}
                 effect="blur"
+                loading="lazy"
               />
             </div>
             <div className="flex flex-col gap-4 lg:order-last">

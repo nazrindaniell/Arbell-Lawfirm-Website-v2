@@ -1,8 +1,9 @@
-import HeaderImg from "../assets/hero-header.webp";
 import PertaminaLogo from "../assets/pertamina-logo.webp";
 import ShopeeLogo from "../assets/shopee-logo.webp";
 import AppleLogo from "../assets/apple-logo.webp";
 import SamsungLogo from "../assets/samsung-logo.webp";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Partnership() {
   return (
@@ -12,25 +13,37 @@ function Partnership() {
           Who trusted us
         </h2>
         <div className="lg:gap-x-18 grid grid-cols-2 place-items-center gap-x-12 gap-y-8 lg:grid-cols-4">
-          <img
+          <LazyLoadImage
             src={PertaminaLogo}
             alt="Partner 1"
             className="aspect-[5/2] w-52 object-contain lg:w-60"
+            effect="blur"
+            loading="lazy"
+            fetchpriority="low"
           />
-          <img
+          <LazyLoadImage
             src={ShopeeLogo}
             alt="Partner 2"
             className="aspect-[5/2] w-52 object-contain lg:w-60"
+            effect="blur"
+            loading="lazy"
+            fetchpriority="low"
           />
-          <img
+          <LazyLoadImage
             src={AppleLogo}
             alt="Partner 3"
             className="aspect-[5/2] w-52 object-contain lg:w-60"
+            effect="blur"
+            loading="lazy"
+            fetchpriority="low"
           />
-          <img
+          <LazyLoadImage
             src={SamsungLogo}
             alt="Partner 4"
             className="aspect-[5/2] w-52 object-contain lg:w-60"
+            effect="blur"
+            loading="lazy"
+            fetchpriority="low"
           />
         </div>
       </div>

@@ -16,6 +16,7 @@ function WhyUsCard({ number, title, description, imgSrc, linkSrc, reverse }) {
           width={"100%"}
           height={"100%"}
           fetchpriority="low"
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col gap-3 p-4">
