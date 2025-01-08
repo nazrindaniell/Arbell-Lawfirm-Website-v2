@@ -13,7 +13,6 @@ function GalleryHeader({ imgSrc }) {
             width={"100%"}
             height={"100%"}
             fetchpriority="high"
-            effect="blur"
           />
         </div>
       </div>

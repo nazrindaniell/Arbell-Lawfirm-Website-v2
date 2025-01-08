@@ -11,7 +11,7 @@ function LawyerProfile({ imgSrc, name, title, desc, linkedIn, instagram }) {
         <LazyLoadImage
           src={imgSrc}
           alt="Lawyer Profile Img"
-          className="md h-full w-full object-cover object-top"
+          className="h-full w-full object-cover object-top"
           width={"100%"}
           height={"100%"}
           effect="blur"

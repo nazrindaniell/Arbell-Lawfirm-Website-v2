@@ -15,7 +15,6 @@ function WhyUsCard({ number, title, description, imgSrc, linkSrc, reverse }) {
           effect="blur"
           width={"100%"}
           height={"100%"}
-          fetchpriority="low"
           loading="lazy"
         />
       </div>
@@ -23,7 +22,7 @@ function WhyUsCard({ number, title, description, imgSrc, linkSrc, reverse }) {
         <h2 className="font-serif text-3xl text-orange lg:text-4xl">
           {number}
         </h2>
-        <h4 className="font-serif text-xl lg:text-2xl">{title}</h4>
+        <h3 className="font-serif text-2xl lg:text-3xl">{title}</h3>
         <p className="text-base text-black-200 lg:text-lg">{description}</p>
         <LearnMoreButton to={linkSrc}>Learn More</LearnMoreButton>
       </div>

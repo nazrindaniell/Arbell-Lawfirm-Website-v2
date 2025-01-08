@@ -17,33 +17,29 @@ function Partnership() {
             src={PertaminaLogo}
             alt="Partner 1"
             className="aspect-[5/2] w-52 object-contain lg:w-60"
-            effect="blur"
             loading="lazy"
-            fetchpriority="low"
+            effect="blur"
           />
           <LazyLoadImage
             src={ShopeeLogo}
             alt="Partner 2"
             className="aspect-[5/2] w-52 object-contain lg:w-60"
-            effect="blur"
             loading="lazy"
-            fetchpriority="low"
+            effect="blur"
           />
           <LazyLoadImage
             src={AppleLogo}
             alt="Partner 3"
             className="aspect-[5/2] w-52 object-contain lg:w-60"
-            effect="blur"
             loading="lazy"
-            fetchpriority="low"
+            effect="blur"
           />
           <LazyLoadImage
             src={SamsungLogo}
             alt="Partner 4"
             className="aspect-[5/2] w-52 object-contain lg:w-60"
-            effect="blur"
             loading="lazy"
-            fetchpriority="low"
+            effect="blur"
           />
         </div>
       </div>
