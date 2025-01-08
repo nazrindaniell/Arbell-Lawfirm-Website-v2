@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import HeaderImg from "../assets/hero-header.webp";
-import HeaderImgPlaceholder from "../assets/hero-header-placeholder.webp";
+import HeaderImg480w from "../assets/hero-header-480w.webp";
 import SampleImg from "../assets/sample-img.webp";
 import WhyUsCard from "../components/WhyUsCard";
 import Partnership from "../components/Partnership";
@@ -35,11 +35,11 @@ function Home() {
         <div className="flex items-center justify-center">
           <LazyLoadImage
             src={HeaderImg}
+            srcSet={`${HeaderImg480w} 480w, ${HeaderImg} 960w`}
             alt="Header Img"
             className="mx-auto h-full w-96 object-cover object-center lg:w-[600px]"
             width={"100%"}
             height={"100%"}
-            placeholderSrc={HeaderImgPlaceholder}
             effect="blur"
             fetchpriority="high"
           />
