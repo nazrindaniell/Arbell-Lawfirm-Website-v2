@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import LearnMoreButton from "../LearnMoreButton";
 import { getLatestBlogPost } from "/contentful";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function LatestBlogPost() {
   const [post, setPost] = useState(null);
@@ -49,10 +51,13 @@ function LatestBlogPost() {
 
     return (
       <div className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-10">
-        <img
+        <LazyLoadImage
           className="h-60 w-full object-cover object-center md:h-80 lg:h-96"
           src={post.fields.image.fields.file.url}
           alt={post.fields.title}
+          width={"100%"}
+          height={"100%"}
+          effect="blur"
         />
         <div className="flex flex-col gap-6">
           <h2 className="font-serif text-3xl lg:text-4xl">

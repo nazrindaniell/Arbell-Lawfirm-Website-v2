@@ -4,6 +4,8 @@ import { getBlogPosts } from "/contentful";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import { RiArrowRightSFill, RiArrowLeftSFill } from "react-icons/ri";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -41,10 +43,13 @@ function Posts() {
       <SwiperSlide key={post.sys.id}>
         <div className="flex flex-1">
           <div className="flex flex-1 flex-col justify-between gap-5">
-            <img
+            <LazyLoadImage
               className="h-60 w-full object-cover object-center md:h-80 lg:h-72"
               src={post.fields.image.fields.file.url}
               alt={post.fields.title}
+              width={"100%"}
+              effect="blur"
+              loading="lazy"
             />
             <h3 className="line-clamp-1 font-serif text-2xl lg:text-3xl">
               {post.fields.title}

@@ -1,3 +1,5 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import LearnMoreButton from "./LearnMoreButton";
 
 function WhyUsCard({ number, title, description, imgSrc, linkSrc, reverse }) {
@@ -6,10 +8,14 @@ function WhyUsCard({ number, title, description, imgSrc, linkSrc, reverse }) {
       className={`flex ${reverse ? "flex-col lg:flex-col-reverse" : "flex-col"}`}
     >
       <div className="md:aspect-square">
-        <img
+        <LazyLoadImage
           src={imgSrc}
           alt={title}
-          className="h-40 w-full object-cover object-center md:h-full"
+          className="h-52 w-full object-cover object-center md:h-full"
+          effect="blur"
+          width={"100%"}
+          height={"100%"}
+          fetchpriority="low"
         />
       </div>
       <div className="flex flex-col gap-3 p-4">

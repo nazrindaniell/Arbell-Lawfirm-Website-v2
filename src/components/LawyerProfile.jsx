@@ -1,15 +1,20 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function LawyerProfile({ imgSrc, name, title, desc, linkedIn, instagram }) {
   return (
     <div className="flex flex-col gap-5">
       <div className="h-80 w-full">
-        <img
+        <LazyLoadImage
           src={imgSrc}
           alt="Lawyer Profile Img"
           className="md h-full w-full object-cover object-top"
+          width={"100%"}
+          height={"100%"}
+          effect="blur"
         />
       </div>
       <div className="flex flex-col gap-4">

@@ -4,7 +4,6 @@ import GalleryHeader from "../components/GalleryHeader";
 import GalleryImg from "../assets/sample-img.webp";
 import Partnership from "../components/Partnership";
 import Faq from "../components/Faq";
-
 import Posts from "../components/contentful/Posts";
 import LatestBlogPost from "../components/contentful/LatestSingleBlog";
 

@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 import HeaderImg from "../assets/hero-header.webp";
+import HeaderImgPlaceholder from "../assets/hero-header-placeholder.webp";
 import SampleImg from "../assets/sample-img.webp";
 import WhyUsCard from "../components/WhyUsCard";
 import Partnership from "../components/Partnership";
 import Faq from "../components/Faq";
 import LearnMoreButton from "../components/LearnMoreButton";
 import Posts from "../components/contentful/Posts";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Home() {
   useEffect(() => {
@@ -13,7 +16,7 @@ function Home() {
   }, []);
   return (
     <>
-      <section className="container mx-auto py-8 lg:flex">
+      <section className="container mx-auto mt-4 flex flex-col gap-5 py-8 lg:flex-row xl:mt-0">
         <div className="flex flex-col justify-center gap-8">
           <h1 className="font-serif text-4xl font-bold lg:text-5xl">
             <span className="italic text-orange">Solving</span> your problems
@@ -30,10 +33,15 @@ function Home() {
           <LearnMoreButton to="#">Learn More</LearnMoreButton>
         </div>
         <div className="flex items-center justify-center">
-          <img
+          <LazyLoadImage
             src={HeaderImg}
-            alt="Header Image"
-            className="w-96 object-cover object-center lg:w-[550px]"
+            alt="Header Img"
+            className="mx-auto h-full w-96 object-cover object-center lg:w-[600px]"
+            width={"100%"}
+            height={"100%"}
+            placeholderSrc={HeaderImgPlaceholder}
+            effect="blur"
+            fetchpriority="high"
           />
         </div>
       </section>
